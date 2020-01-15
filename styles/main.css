@@ -7,15 +7,20 @@ h4,
 ul {
   margin: 0;
   padding: 0;
-  font-family: Poppins, sans-serif;
+  font-family: Open sans, sans-serif;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.5;
   outline: none;
   list-style: none; }
 
-strong {
-  font-weight: 500; }
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: Poppins, sans-serif;
+  font-weight: bold; }
 
 a {
   text-decoration: none;
@@ -49,7 +54,8 @@ button {
     height: 680px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-left: 140px; }
+    padding-left: 140px;
+    margin: auto; }
 
 @media (max-width: 1024px) {
   .header__top {
@@ -107,9 +113,9 @@ button {
       margin: 0; } }
 
 .header-info {
+  max-width: 380px;
   color: #fff;
-  padding-top: 120px;
-  padding-right: 150px; }
+  padding-top: 120px; }
   .header-info__heading {
     font-weight: 600;
     font-size: 64px;
@@ -117,8 +123,6 @@ button {
     letter-spacing: -2px;
     margin-bottom: 32px; }
   .header-info__text {
-    font-family: Open, sans-serif;
-    font-weight: normal;
     font-size: 18px;
     margin: 0 0 80px; }
 
@@ -176,7 +180,6 @@ button {
     height: 9px; }
   .slider__heading {
     position: absolute;
-    font-weight: bold;
     line-height: 19px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -184,8 +187,6 @@ button {
     left: 145px; }
   .slider__text {
     position: absolute;
-    font-family: Open, sans-serif;
-    font-weight: normal;
     font-size: 14px;
     line-height: 140%;
     width: 264px;
@@ -205,7 +206,7 @@ button {
     color: #253757;
     margin: 0 0 16px; }
   .about__text {
-    font-family: Open, sans-serif;
+    font-weight: 600;
     font-size: 24px;
     color: #6c788b; }
 
@@ -268,8 +269,6 @@ button {
     color: #253757;
     margin: 0 0 16px; }
   .direction__text {
-    font-family: Open, sans-serif;
-    font-weight: normal;
     font-size: 14px;
     text-align: center;
     color: #6c788b;
@@ -289,7 +288,7 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between; }
   .process__process-info {
-    max-width: 360px;
+    max-width: 340px;
     padding-top: 100px; }
   .process__cards {
     max-width: 700px;
@@ -329,8 +328,6 @@ button {
   margin-bottom: 24px; }
 
 .process-info__text {
-  font-family: Open, sans-serif;
-  font-weight: normal;
   font-size: 14px;
   color: #6c788b; }
 
@@ -346,7 +343,7 @@ button {
   padding: 32px; }
   .card_offset {
     margin-top: 90px; }
-  .card__number {
+  .card__heading {
     width: 46px;
     margin-bottom: 24px;
     border-radius: 23px;
@@ -354,20 +351,20 @@ button {
     line-height: 24px;
     text-align: center;
     text-transform: uppercase; }
-  .card__number_1 {
+  .card__heading_1 {
     color: #56ccf2;
     background-color: rgba(86, 204, 242, 0.1); }
-  .card__number_2 {
+  .card__heading_2 {
     color: #fcc91d;
     background-color: rgba(252, 201, 29, 0.1); }
-  .card__number_3 {
+  .card__heading_3 {
     color: #15d850;
     background-color: rgba(21, 216, 80, 0.1); }
-  .card__number_4 {
+  .card__heading_4 {
     color: #f36363;
     background-color: rgba(243, 99, 99, 0.1); }
   .card__text {
-    font-family: Open, sans-serif;
+    font-weight: 600;
     color: #6c788b;
     margin-bottom: 32px; }
   .card__learn-button {
