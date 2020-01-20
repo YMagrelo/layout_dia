@@ -11,7 +11,6 @@ ul {
   font-size: 13px;
   font-weight: normal;
   line-height: 1.5;
-  outline: none;
   list-style: none; }
 
 h1,
@@ -93,7 +92,7 @@ button {
   .nav__item-action {
     margin-right: 0;
     margin-left: auto; }
-  .nav__item:hover::after {
+  .nav__item:hover::after, .nav__link:focus::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -143,6 +142,11 @@ button {
             transform: translateY(1px);
     -webkit-filter: saturate(150%);
             filter: saturate(150%); }
+  .button:focus {
+    -webkit-filter: saturate(250%);
+            filter: saturate(250%);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
   .button:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
@@ -174,6 +178,9 @@ button {
               transform: translateY(1px);
       -webkit-filter: saturate(150%);
               filter: saturate(150%); }
+    .slider__button:focus {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
     .slider__button:hover {
       -webkit-transform: scale(1.1);
               transform: scale(1.1); }
@@ -290,10 +297,11 @@ button {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding: 50px; }
   .process__process-info {
     max-width: 340px;
-    padding-top: 100px; }
+    padding-top: 50px; }
   .process__cards {
     max-width: 700px;
     display: grid;
@@ -377,24 +385,29 @@ button {
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
-  .card__button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 16px;
+            align-items: center;
     -webkit-transition: -webkit-transform 0.5s;
     transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
     transition: transform 0.5s, -webkit-transform 0.5s; }
-    .card__button:active {
+    .card__learn-button:active {
       -webkit-transform: translateY(1px);
               transform: translateY(1px);
       -webkit-filter: saturate(150%);
               filter: saturate(150%); }
-    .card__button:hover {
+    .card__learn-button:focus {
+      -webkit-filter: saturate(250%);
+              filter: saturate(250%);
       -webkit-transform: scale(1.1);
               transform: scale(1.1); }
+    .card__learn-button:hover {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+  .card__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 16px; }
   .card__button_1 {
     background-color: #56ccf2; }
   .card__button_2 {
@@ -423,6 +436,7 @@ button {
   height: 1000px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
   border-radius: 200px 0 0 200px;
   background-color: #ff9c8e;
   color: #fff;
@@ -483,7 +497,7 @@ button {
   height: 64px;
   border-radius: 50%;
   background-color: #fff;
-  padding-right: 35px; }
+  margin-right: 35px; }
 
 .features-info__icon {
   position: absolute;
@@ -501,8 +515,9 @@ button {
     margin-bottom: 30px; } }
 
 .testimonials {
-  max-width: 1100px;
-  margin: auto; }
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 50px; }
   .testimonials__title {
     display: block;
     font-size: 13px;
@@ -520,9 +535,11 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 0 auto 150px; }
 
 @media (max-width: 999px) {
@@ -552,13 +569,10 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 315px;
+  max-width: 300px;
   background-color: #fff;
   border-radius: 24px;
-  padding: 87px 32px 32px;
-  margin-right: 100px; }
-  .person:last-child {
-    margin-right: 0; }
+  padding: 87px 32px 32px; }
   .person__photo {
     position: relative;
     width: 140px;
@@ -693,9 +707,7 @@ button {
 
 @media (max-width: 999px) {
   .person {
-    margin: 0 auto 60px; }
-    .person:last-child {
-      margin-left: 0; } }
+    margin: 0 auto 60px; } }
 
 .vision {
   position: relative;
@@ -812,7 +824,7 @@ button {
         -ms-flex-pack: center;
             justify-content: center;
     margin: auto;
-    padding: 180px 0 40px;
+    padding: 180px 50px 40px;
     border-top-right-radius: 150px;
     background: #008aff; }
   .footer__message {
@@ -861,7 +873,7 @@ button {
     position: relative;
     margin-right: 65px;
     text-transform: uppercase; }
-  .footer__nav-item:hover::after {
+  .footer__nav-item:hover::after, .footer__nav-link:focus::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -885,74 +897,44 @@ button {
   font-size: 32px;
   margin-bottom: 55px; }
 
-.message__email {
-  border: none;
-  width: 460px;
-  height: 40px;
-  background-color: #008aff;
-  border-bottom: 2px solid #fff;
-  margin-bottom: 45px; }
-  .message__email::-webkit-input-placeholder {
-    font-weight: 600;
-    font-size: 15px;
-    color: #fff;
-    opacity: 0.7; }
-  .message__email::-moz-placeholder {
-    font-weight: 600;
-    font-size: 15px;
-    color: #fff;
-    opacity: 0.7; }
-  .message__email:-ms-input-placeholder {
-    font-weight: 600;
-    font-size: 15px;
-    color: #fff;
-    opacity: 0.7; }
-  .message__email::-ms-input-placeholder {
-    font-weight: 600;
-    font-size: 15px;
-    color: #fff;
-    opacity: 0.7; }
-  .message__email::placeholder {
-    font-weight: 600;
-    font-size: 15px;
-    color: #fff;
-    opacity: 0.7; }
+.message__message {
+  margin-bottom: 80px; }
 
-.message__name, .message__message {
+.message__email, .message__name, .message__message {
   border: none;
   width: 460px;
   height: 40px;
   background-color: #008aff;
   border-bottom: 1px solid #fff;
-  margin-bottom: 45px; }
-  .message__name::-webkit-input-placeholder, .message__message::-webkit-input-placeholder {
+  margin-bottom: 45px;
+  caret-color: #fff; }
+  .message__email::-webkit-input-placeholder, .message__name::-webkit-input-placeholder, .message__message::-webkit-input-placeholder {
     font-weight: 600;
     font-size: 15px;
     color: #fff;
     opacity: 0.7; }
-  .message__name::-moz-placeholder, .message__message::-moz-placeholder {
+  .message__email::-moz-placeholder, .message__name::-moz-placeholder, .message__message::-moz-placeholder {
     font-weight: 600;
     font-size: 15px;
     color: #fff;
     opacity: 0.7; }
-  .message__name:-ms-input-placeholder, .message__message:-ms-input-placeholder {
+  .message__email:-ms-input-placeholder, .message__name:-ms-input-placeholder, .message__message:-ms-input-placeholder {
     font-weight: 600;
     font-size: 15px;
     color: #fff;
     opacity: 0.7; }
-  .message__name::-ms-input-placeholder, .message__message::-ms-input-placeholder {
+  .message__email::-ms-input-placeholder, .message__name::-ms-input-placeholder, .message__message::-ms-input-placeholder {
     font-weight: 600;
     font-size: 15px;
     color: #fff;
     opacity: 0.7; }
-  .message__name::placeholder, .message__message::placeholder {
+  .message__email::placeholder, .message__name::placeholder, .message__message::placeholder {
     font-weight: 600;
     font-size: 15px;
     color: #fff;
     opacity: 0.7; }
-
-.message__message {
-  margin-bottom: 80px; }
+  .message__email:focus, .message__name:focus, .message__message:focus {
+    border-color: #ff9c8e; }
 
 .message__button {
   width: 225px;
