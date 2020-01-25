@@ -127,7 +127,7 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 20px auto 0; }
+    margin: 20px auto 10px; }
     .nav__list {
       max-width: 150px;
       -webkit-box-orient: vertical;
@@ -155,6 +155,10 @@ button {
   .header-info__text {
     font-size: 18px;
     margin: 0 0 80px; }
+
+@media (max-width: 999px) {
+  .header-info {
+    margin: auto; } }
 
 .button {
   background-color: #ff9c8e;
