@@ -41,6 +41,9 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -53,10 +56,27 @@ button {
   .header__logo {
     width: 60px;
     height: 28px; }
+  .header__hire-link {
+    position: relative;
+    display: block;
+    width: 70px;
+    letter-spacing: 3px; }
+  .header__hire-link:hover::after, .header__hire-link:focus::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 22px;
+    background: #ff9c8e;
+    border-radius: 4px; }
   .header__bottom {
     height: 680px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-left: 140px;
     margin: auto; }
 
@@ -71,27 +91,23 @@ button {
     padding-left: 50px;
     display: block; } }
 
+@media (min-width: 1600px) {
+  .header__bottom {
+    padding-left: 15%; } }
+
 .nav {
-  margin-left: 7%;
+  margin-left: 78px;
   width: 100%; }
   .nav__list {
     max-width: 1100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     margin: 0;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     list-style: none; }
   .nav__item {
     position: relative;
-    margin-right: 6%; }
-  .nav__item-action {
-    margin-right: 0;
-    margin-left: auto; }
+    margin-right: 4%; }
   .nav__item:hover::after, .nav__link:focus::after {
     content: "";
     position: absolute;
@@ -111,9 +127,20 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 20px; }
+    margin: 20px auto 0; }
+    .nav__list {
+      max-width: 150px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: auto; }
     .nav__item {
-      margin: 0; } }
+      margin: 0;
+      text-align: center; } }
 
 .header-info {
   max-width: 380px;
@@ -458,7 +485,7 @@ button {
 @media (max-width: 999px) {
   .features {
     margin: 50px 0;
-    padding: 70px; }
+    padding: 100px 70px 70px 100px; }
   .features__image {
     display: none; } }
 
@@ -945,7 +972,7 @@ button {
     margin: auto;
     margin-bottom: 30px; }
     .message__email, .message__name, .message__message {
-      width: 350px; } }
+      width: 300px; } }
 
 .contact__heading {
   font-size: 32px;
