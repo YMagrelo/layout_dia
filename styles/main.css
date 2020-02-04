@@ -1009,7 +1009,8 @@ button {
   border-bottom: 1px solid #fff;
   margin-bottom: 45px;
   caret-color: #fff;
-  font-weight: 600; }
+  font-weight: 600;
+  font-size: 15px; }
   .message__email::-webkit-input-placeholder, .message__name::-webkit-input-placeholder, .message__message::-webkit-input-placeholder {
     font-weight: 600;
     font-size: 15px;
