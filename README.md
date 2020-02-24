@@ -1,2 +1,2 @@
-# Dia landing page
+https://ymagrelo.github.io/layout_dia/
 
