@@ -246,6 +246,8 @@ button {
   .button__info {
     width: 230px;
     height: 50px; }
+  .button__info--link {
+    width: 200px; }
 
 .slider {
   position: relative;
@@ -680,7 +682,14 @@ button {
     height: 140px;
     border-radius: 50%;
     margin-bottom: 110px;
-    z-index: 1; }
+    z-index: 1;
+    -webkit-transition: -webkit-transform 350ms linear;
+    transition: -webkit-transform 350ms linear;
+    transition: transform 350ms linear;
+    transition: transform 350ms linear, -webkit-transform 350ms linear; }
+  .person__photo:hover {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15); }
   .person_first::before {
     content: "";
     display: block;
