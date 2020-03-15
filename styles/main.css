@@ -1050,7 +1050,10 @@ button {
 
 .message__button {
   width: 225px;
-  height: 55px; }
+  height: 50px; }
+
+.message__form {
+  display: block; }
 
 @media (max-width: 999px) {
   .message {
